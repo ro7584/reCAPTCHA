@@ -34,17 +34,17 @@
                         $('#hdnGoogleRecaptcha').val(token);
                         $('#lblValue').html(token);
 
-                        $.post("https://localhost:7229/api/signup",
+                        $.post("/api/signup",
                             {
                                 email: $("#txtEmail").val(),
                                 password: $("#txtPassword").val(),
                                 confirmPassword: $("#txtConfirmPassword").val(),
                                 name: $("#txtName").val(),
-                                recaptchaToken: hdnGoogleRecaptcha.val()
+                                recaptchaToken: token
 
                             })
                             .done(function (result, status, xhr) {
-                                $("#lblMessage").html(result)
+                                $("#lblMessage").html(JSON.stringify(result));
                             })
                             .fail(function (xhr, status, error) {
                                 $("#lblMessage").html("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)

@@ -17,6 +17,7 @@ builder.Services.AddTransient<ISignupService, SignupService>();
 
 var app = builder.Build();
 
+app.UseStaticFiles();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

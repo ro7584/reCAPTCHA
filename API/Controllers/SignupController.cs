@@ -17,7 +17,7 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Signup(SignupRequest signup)
+        public async Task<IActionResult> Signup([FromForm]SignupRequest signup)
         {
             if (signup == null)
             {

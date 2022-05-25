@@ -1,3 +1,6 @@
+# Get your key from
+https://www.google.com/recaptcha/admin
+
 # reCAPTCHA
 This repo includes an integration projects with Google reCAPTCHA v3 and server verification using ASP.NET Core Web API
 
